@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - Nuggy</title>
-    <link rel="icon" type="image/x-icon" href="nuggy_logo_nobg.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/nuggy_logo_nobg.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/careers-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700,800,900&family=IBM+Plex+Mono:wght@400;500;600&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="index.html"><img src="nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img"></a>
+                    <a href="index.html"><img src="assets/nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html#features">Features</a></li>
@@ -23,7 +24,7 @@
                     <li><a href="index.html#pricing">Pilot Program</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html" class="cta-button">Contact Us</a></li>
+                    <li><a href="contact.html" class="cta-button"><span>Apply Now</span></a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -34,36 +35,106 @@
         </div>
     </nav>
 
-    <section class="page-hero">
+    <section class="careers-hero">
+        <div class="hero-pattern"></div>
         <div class="container">
-            <h1>Join the Nuggy Team</h1>
-            <p class="page-subtitle">Help us revolutionize cannabis retail pricing</p>
+            <div class="careers-hero-content">
+                <span class="hero-label mono">Careers at Nuggy</span>
+                <h1 class="careers-title">
+                    <span class="title-line">Build the</span>
+                    <span class="title-line highlight">Future of Cannabis</span>
+                    <span class="title-line">Retail</span>
+                </h1>
+                <p class="careers-subtitle">Join our mission to transform thin margins into profitable ones through AI-powered dynamic pricing.</p>
+            </div>
         </div>
     </section>
 
-    <section class="careers-intro">
+    <section class="culture-section">
         <div class="container">
-            <div class="intro-content">
-                <h2>Why Work at Nuggy?</h2>
-                <p>We're a small but mighty team on a mission to transform the cannabis industry. If you're passionate about technology, design, and making a real impact in an emerging market, we want to hear from you.</p>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>🌱 Industry Impact</h3>
-                        <p>Work directly with cannabis retailers to solve real business challenges</p>
+            <div class="culture-grid">
+                <div class="culture-content reveal-fade">
+                    <span class="section-label">Our Culture</span>
+                    <h2>Small Team, <span class="text-gradient">Big Impact</span></h2>
+                    <p class="culture-text">We're a nimble startup tackling one of the cannabis industry's biggest challenges. Every team member directly impacts our product and our pilot partners' success.</p>
+                    
+                    <div class="values-list">
+                        <div class="value-item">
+                            <span class="value-icon">🚀</span>
+                            <div>
+                                <h4>Move Fast</h4>
+                                <p>Ship features weekly, iterate based on real feedback</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">📊</span>
+                            <div>
+                                <h4>Data-Driven</h4>
+                                <p>Every decision backed by metrics and user insights</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🌿</span>
+                            <div>
+                                <h4>Industry First</h4>
+                                <p>Deep understanding of cannabis retail challenges</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="benefit-card">
-                        <h3>🚀 Early Stage</h3>
-                        <p>Join during our pilot phase and help shape the product from the ground up</p>
+                </div>
+                <div class="culture-visual reveal-scale">
+                    <div class="team-photo-grid">
+                        <a href="#engineering-jobs" class="photo-card" data-delay="0">
+                            <div class="photo-placeholder">
+                                <span class="emoji">👨‍💻</span>
+                            </div>
+                            <span class="photo-label">Engineering</span>
+                        </a>
+                        <a href="#design-jobs" class="photo-card" data-delay="100">
+                            <div class="photo-placeholder">
+                                <span class="emoji">🎨</span>
+                            </div>
+                            <span class="photo-label">Design</span>
+                        </a>
+                        <a href="#growth-jobs" class="photo-card" data-delay="200">
+                            <div class="photo-placeholder">
+                                <span class="emoji">📈</span>
+                            </div>
+                            <span class="photo-label">Growth</span>
+                        </a>
+                        <a href="#general-application" class="photo-card highlight" data-delay="300">
+                            <div class="photo-placeholder">
+                                <span class="emoji">❓</span>
+                            </div>
+                            <span class="photo-label">You?</span>
+                        </a>
                     </div>
-                    <div class="benefit-card">
-                        <h3>📈 Growth Opportunity</h3>
-                        <p>Learn directly from founders and grow with the company</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>🎨 Creative Freedom</h3>
-                        <p>Your ideas matter - we value innovation and fresh perspectives</p>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="perks-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Benefits & Perks</span>
+                <h2>What We <span class="text-gradient">Offer</span></h2>
+            </div>
+            <div class="perks-grid">
+                <div class="perk-card reveal-fade">
+                    <div class="perk-icon">💰</div>
+                    <h3>Equity Opportunity</h3>
+                    <p>Real ownership in a high-growth startup</p>
+                </div>
+                <div class="perk-card reveal-fade" data-delay="100">
+                    <div class="perk-icon">🏠</div>
+                    <h3>Remote First</h3>
+                    <p>Work from anywhere, async-friendly culture</p>
+                </div>
+                <div class="perk-card reveal-fade" data-delay="500">
+                    <div class="perk-icon">🌱</div>
+                    <h3>Industry Access</h3>
+                    <p>Network with cannabis industry leaders</p>
                 </div>
             </div>
         </div>
@@ -71,63 +142,124 @@
 
     <section class="open-positions">
         <div class="container">
-            <h2 class="section-title">Open Positions</h2>
+            <div class="section-header">
+                <span class="section-label">Open Roles</span>
+                <h2>Join Our <span class="text-gradient">Team</span></h2>
+            </div>
             
-            <div class="job-listing featured">
-                <div class="job-header">
-                    <h3>UI/UX Design Intern</h3>
-                    <span class="job-type">Part-time / Remote</span>
-                </div>
-                <div class="job-details">
-                    <p>We're looking for a talented UI/UX design intern to help us create an intuitive, beautiful experience for cannabis retailers. This is a perfect opportunity for someone looking to gain real-world experience in a fast-growing startup.</p>
-                    
-                    <h4>What You'll Do:</h4>
-                    <ul>
-                        <li>Design user interfaces for our web application</li>
-                        <li>Create wireframes, prototypes, and high-fidelity mockups</li>
-                        <li>Conduct user research with dispensary owners and managers</li>
-                        <li>Collaborate on our design system and brand guidelines</li>
-                        <li>Help improve our landing page and marketing materials</li>
-                    </ul>
-                    
-                    <h4>What We're Looking For:</h4>
-                    <ul>
-                        <li>Currently pursuing or recently completed degree in Design, HCI, or related field</li>
-                        <li>Portfolio demonstrating UI/UX design skills</li>
-                        <li>Proficiency in Figma or similar design tools</li>
-                        <li>Interest in data visualization and dashboard design</li>
-                        <li>Enthusiasm for the cannabis industry is a plus!</li>
-                    </ul>
-                    
-                    <h4>What You'll Get:</h4>
-                    <ul>
-                        <li>Hands-on experience building a product from scratch</li>
-                        <li>Direct mentorship from founders</li>
-                        <li>Flexible hours (10-20 hours/week)</li>
-                        <li>Remote work flexibility</li>
-                        <li>NOTE: This is an unpaid internship with potential for equity.</li>
-                    </ul>
-                    
-                    <div class="job-cta">
-                        <button class="btn-primary apply-btn" data-position="UI/UX Design Intern">Apply Now</button>
-                        <p class="job-note">Applications reviewed on a rolling basis</p>
+            <!-- Design Department -->
+            <div id="design-jobs" class="department-section">
+                <h3 class="department-title">
+                    <span class="department-icon">🎨</span>
+                    Design
+                </h3>
+                <div class="jobs-grid">
+                    <div class="job-card featured reveal-slide">
+                        <div class="job-badge">New</div>
+                        <div class="job-content">
+                            <div class="job-header">
+                                <h3>UI/UX Design Intern</h3>
+                                <div class="job-meta">
+                                    <span class="job-type">Part-time</span>
+                                    <span class="job-location">Remote</span>
+                                </div>
+                            </div>
+                            <p class="job-description">Help design the future of cannabis retail pricing. Create intuitive dashboards, conduct user research, and shape our product's visual identity.</p>
+                            
+                            <div class="job-requirements">
+                                <h4>Key Responsibilities</h4>
+                                <ul>
+                                    <li>Design user interfaces for our web application</li>
+                                    <li>Create wireframes and high-fidelity mockups</li>
+                                    <li>Conduct user research with dispensary teams</li>
+                                    <li>Develop our design system</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">User Research</span>
+                                <span class="tag">10-20 hrs/week</span>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <p class="job-note">Unpaid with equity opportunity</p>
+                                <button class="btn-primary apply-btn" data-position="UI/UX Design Intern">
+                                    <span>Apply Now</span>
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="future-roles">
-                <h3>Don't See Your Role?</h3>
-                <p>We're always looking for talented people who share our vision. Send us your resume and tell us how you'd contribute to Nuggy's mission.</p>
-                <button class="btn-secondary apply-btn" data-position="General Application">Send General Application</button>
+            <!-- Engineering Department -->
+            <div id="engineering-jobs" class="department-section">
+                <h3 class="department-title">
+                    <span class="department-icon">👨‍💻</span>
+                    Engineering
+                </h3>
+                <div class="jobs-grid">
+                    <div class="job-card coming-soon reveal-slide">
+                        <div class="job-content">
+                            <h3>Full-Stack Engineer</h3>
+                            <p class="coming-text">Coming Soon</p>
+                            <p>We'll be hiring engineers as we scale. Join our talent network to be notified.</p>
+                            <button class="btn-secondary notify-btn">Get Notified</button>
+                        </div>
+                    </div>
+                    <div class="job-card coming-soon reveal-slide" data-delay="100">
+                        <div class="job-content">
+                            <h3>Machine Learning Engineer</h3>
+                            <p class="coming-text">Coming Q2 2025</p>
+                            <p>Build and optimize our pricing algorithms. Work with real-time data at scale.</p>
+                            <button class="btn-secondary notify-btn">Get Notified</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Growth Department -->
+            <div id="growth-jobs" class="department-section">
+                <h3 class="department-title">
+                    <span class="department-icon">📈</span>
+                    Growth & Marketing
+                </h3>
+                <div class="jobs-grid">
+                    <div class="job-card coming-soon reveal-slide">
+                        <div class="job-content">
+                            <h3>Growth Marketing Manager</h3>
+                            <p class="coming-text">Coming Soon</p>
+                            <p>Help us reach every dispensary in North America. Marketing role opening Q2 2025.</p>
+                            <button class="btn-secondary notify-btn">Get Notified</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="general-application" class="general-application reveal-fade">
+                <div class="general-content">
+                    <h3>Don't see your role?</h3>
+                    <p>We're always looking for exceptional people. Tell us how you'd contribute to Nuggy's mission.</p>
+                    <button class="btn-primary apply-btn" data-position="General Application">
+                        <span>Send General Application</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <div class="margin-space"></div>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
+                    <img src="assets/nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
                     <p>Your Personal Pricing Buddy</p>
                 </div>
                 <div class="footer-links">
@@ -162,7 +294,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script>
         // Handle job application buttons
         document.querySelectorAll('.apply-btn').forEach(button => {
@@ -171,6 +303,13 @@
                 const subject = encodeURIComponent(`Application: ${position} - Nuggy`);
                 const body = encodeURIComponent(`Hello Nuggy Team,\n\nI'm interested in applying for the ${position} position.\n\n[Please attach your resume and portfolio/relevant work samples]\n\nBest regards`);
                 window.location.href = `mailto:info@nuggy.io?subject=${subject}&body=${body}`;
+            });
+        });
+        
+        // Handle notify buttons
+        document.querySelectorAll('.notify-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = 'contact.html';
             });
         });
     </script>

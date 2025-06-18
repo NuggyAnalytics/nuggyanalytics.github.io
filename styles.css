@@ -176,6 +176,7 @@ h2 {
 .hero-cta {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .btn-primary, .btn-secondary {

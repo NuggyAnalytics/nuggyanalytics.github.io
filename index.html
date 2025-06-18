@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuggy - Your Personal Pricing Buddy</title>
-    <link rel="icon" type="image/x-icon" href="nuggy_logo_nobg.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/nuggy_logo_nobg.ico">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700,800,900&family=IBM+Plex+Mono:wght@400;500;600&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <img src="nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
+                    <img src="assets/nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#pricing">Pilot Program</a></li>
                     <li><a href="careers.html">Careers</a></li>
-                    <li><a href="#contact" class="cta-button">Apply Now</a></li>
+                    <li><a href="#contact" class="cta-button"><span>Apply Now</span></a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -34,91 +34,193 @@
     </nav>
 
     <section class="hero">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-elements">
+                <span class="float-element" data-speed="0.5">$</span>
+                <span class="float-element" data-speed="0.3">%</span>
+                <span class="float-element" data-speed="0.7">↗</span>
+                <span class="float-element" data-speed="0.4">📊</span>
+            </div>
+        </div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="nuggy_logo_nobg.svg" alt="Nuggy" class="hero-logo-img">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">AI-Powered Dynamic Pricing</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Transform</span>
+                        <span class="title-line highlight">Cannabis Margins</span>
+                        <span class="title-line">Into Profits</span>
+                    </h1>
+                    <p class="hero-subtitle">Join our pilot program and let AI optimize your dispensary pricing in real-time.</p>
+                    <div class="hero-cta">
+                        <button class="btn-primary glitch-btn">
+                            <span>Join the Pilot</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        <button class="btn-secondary">See How It Works</button>
+                    </div>
                 </div>
-                <h1 class="hero-title">Your Personal Pricing Buddy</h1>
-                <p class="hero-subtitle">Join our pilot program to transform thin cannabis margins into profitable ones with AI-powered dynamic pricing.</p>
-                <div class="hero-cta">
-                    <button class="btn-primary">Join the Pilot</button>
-                    <button class="btn-secondary">See How It Works</button>
-                </div>
-                <div class="trust-badges">
-                    <span class="badge-item">🚀 Easy Integration</span>
-                    <span class="badge-item">📊 Data-Driven Insights</span>
-                    <span class="badge-item">🌿 Cannabis-Focused</span>
+                <div class="hero-visual">
+                    <div class="logo-showcase">
+                        <img src="assets/nuggy_logo_nobg.svg" alt="Nuggy" class="hero-logo-img floating">
+                        <div class="tech-lines">
+                            <svg class="line-svg" viewBox="0 0 400 400">
+                                <path class="tech-path" d="M50,200 Q200,100 350,200" />
+                                <path class="tech-path" d="M50,250 Q200,150 350,250" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="metric-grid">
+                        <div class="metric-card floating" data-delay="0">
+                            <span class="metric-value">+21%</span>
+                            <span class="metric-label">Revenue Increase</span>
+                        </div>
+                        <div class="metric-card floating" data-delay="200">
+                            <span class="metric-value">500+</span>
+                            <span class="metric-label">Products Tracked</span>
+                        </div>
+                        <div class="metric-card floating" data-delay="400">
+                            <span class="metric-value">24/7</span>
+                            <span class="metric-label">AI Optimization</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="dashboard-preview">
-                    <div class="metric-card">
-                        <span class="metric-label">Target Margin</span>
-                        <span class="metric-value">+15%</span>
-                        <span class="metric-arrow">↗</span>
-                    </div>
-                    <div class="metric-card">
-                        <span class="metric-label">Products to Track</span>
-                        <span class="metric-value">500+</span>
-                        <span class="metric-arrow">↗</span>
-                    </div>
-                    <div class="metric-card">
-                        <span class="metric-label">Pilot Spots</span>
-                        <span class="metric-value">Limited</span>
-                        <span class="metric-arrow">↗</span>
-                    </div>
+            <!-- <div class="partner-logos">
+                <p class="partner-label">Trusted by forward-thinking dispensaries</p>
+                <div class="logo-row">
+                    <div class="partner-logo">🌿 GreenLeaf</div>
+                    <div class="partner-logo">🍃 CannaCore</div>
+                    <div class="partner-logo">🌱 BudHub</div>
+                    <div class="partner-logo">🌲 TreeTop</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Built for Cannabis Retail Success</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌿</div>
-                    <h3>Cannabis-Specific Pricing</h3>
-                    <p>Optimize prices for flower, edibles, concentrates, and accessories with category-specific algorithms.</p>
+            <div class="section-header">
+                <span class="section-label">Features</span>
+                <h2 class="section-title">Built for <span class="text-gradient">Cannabis Retail</span></h2>
+            </div>
+            <div class="features-grid asymmetric">
+                <div class="feature-card large reveal-fade">
+                    <div class="feature-bg"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-wrap">
+                            <span class="feature-icon">🌿</span>
+                        </div>
+                        <h3>Cannabis-Specific AI</h3>
+                        <p>Our algorithms understand flower, edibles, concentrates, and accessories.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Custom to your dispensary</span>
+                            <span class="stat">ML Models</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Margin Intelligence</h3>
-                    <p>Turn thin margins into profitable ones with real-time cost analysis and pricing recommendations.</p>
+                <div class="feature-card reveal-fade" data-delay="100">
+                    <div class="feature-bg"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-wrap">
+                            <span class="feature-icon">🔍</span>
+                        </div>
+                        <h3>Competitor Analysis</h3>
+                        <p>See how your pricing compares to the competition.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>Your pricing data stays confidential. We use industry-standard encryption to protect your business information.</p>
+                <div class="feature-card reveal-fade" data-delay="100">
+                    <div class="feature-bg"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-wrap">
+                            <span class="feature-icon">📊</span>
+                        </div>
+                        <h3>Margin Intelligence</h3>
+                        <p>Real-time cost analysis meets dynamic pricing.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>POS Integration</h3>
-                    <p>Seamless one-click integration with major cannabis POS systems. Update prices instantly.</p>
-                </div>
+                
+                <!-- <div class="feature-card wide reveal-fade" data-delay="300">
+                    <div class="feature-bg"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-wrap">
+                            <span class="feature-icon">⚡</span>
+                        </div>
+                        <h3>Instant POS Integration</h3>
+                        <p>Connect with Dutchie, Jane, Treez, and more. One-click setup, real-time sync.</p>
+                        <div class="integration-logos">
+                            <span class="integration">Dutchie</span>
+                            <span class="integration">Jane</span>
+                            <span class="integration">Treez</span>
+                            <span class="integration">+5</span>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2 class="section-title">Seamless Integration in Minutes</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Connect Your POS</h3>
-                    <p>One-click integration with your cannabis POS system. No complex setup required.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Set Margin Goals</h3>
-                    <p>Define target margins by category. We'll optimize prices while staying competitive.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Watch Profits Grow</h3>
-                    <p>AI analyzes sales data and adjusts prices in real-time to maximize your margins.</p>
+            <div class="section-header">
+                <span class="section-label">Process</span>
+                <h2 class="section-title">Launch in <span class="text-gradient">3 Simple Steps</span></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-line"></div>
+                <div class="process-grid">
+                    <div class="process-step reveal-slide">
+                        <div class="step-marker">
+                            <span class="step-number">01</span>
+                            <div class="step-pulse"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Connect</h3>
+                            <p>Link your POS with one click. We support all major cannabis platforms.</p>
+                            <div class="step-visual">
+                                <div class="connection-animation">
+                                    <span class="connect-dot"></span>
+                                    <span class="connect-line"></span>
+                                    <span class="connect-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-step reveal-slide" data-delay="200">
+                        <div class="step-marker">
+                            <span class="step-number">02</span>
+                            <div class="step-pulse"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Configure</h3>
+                            <p>Set your target margins. Our AI handles the complexity.</p>
+                            <div class="step-visual">
+                                <div class="config-bars">
+                                    <div class="bar" style="--height: 60%"></div>
+                                    <div class="bar" style="--height: 80%"></div>
+                                    <div class="bar" style="--height: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-step reveal-slide" data-delay="400">
+                        <div class="step-marker">
+                            <span class="step-number">03</span>
+                            <div class="step-pulse"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Optimize</h3>
+                            <p>Watch as AI maximizes your profits 24/7.</p>
+                            <div class="step-visual">
+                                <div class="growth-chart">
+                                    <svg viewBox="0 0 100 50">
+                                        <path class="chart-line" d="M10,40 Q30,35 50,25 T90,10" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,60 +228,104 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2 class="section-title">Join Our Pilot Program</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card featured">
-                    <h3>Pilot Partner</h3>
-                    <div class="price">Free<span> for 3 months</span></div>
-                    <ul class="pricing-features">
-                        <li>Full platform access</li>
-                        <li>Up to 1,000 SKUs</li>
-                        <li>Weekly strategy calls</li>
-                        <li>Direct founder support</li>
-                        <li>Help shape the product</li>
-                    </ul>
-                    <button class="btn-primary" style="background-color: #ffffff; color: var(--deep-forest);" onclick="window.location.href='contact.html'">Apply Now</button>
+            <div class="section-header">
+                <span class="section-label">Pilot Program</span>
+                <h2 class="section-title">Be an <span class="text-gradient">Early Partner</span></h2>
+            </div>
+            <div class="pricing-wrapper">
+                <div class="pricing-card pilot-card reveal-scale">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="pilot-badge">Limited Spots</div>
+                        <h3>Pilot Partner</h3>
+                        <div class="price-display">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">0</span>
+                            <span class="price-period">for 3 months</span>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>Full platform access</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>Up to 1,000 SKUs</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>Weekly strategy calls</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>Direct founder support</span>
+                            </div>
+                            <div class="feature-item highlight">
+                                <span class="check-icon">✓</span>
+                                <span>Help shape the product</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary large" onclick="window.location.href='contact.html'">
+                            <span>Apply for Pilot</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        <p class="card-note">Only 10 spots remaining</p>
+                    </div>
                 </div>
-                <!-- <div class="pricing-card featured">
-                    <div class="badge">Limited Spots</div>
-                    <h3>Early Adopter</h3>
-                    <div class="price">50% Off<span>lifetime discount</span></div>
-                    <ul class="pricing-features">
-                        <li>Lock in discounted pricing</li>
-                        <li>Priority feature requests</li>
-                        <li>Exclusive partner benefits</li>
-                        <li>First access to new features</li>
-                        <li>Success story opportunities</li>
-                        <li>Referral bonuses</li>
-                    </ul>
-                    <button class="btn-primary">Secure Your Spot</button>
-                </div> -->
-                <div class="pricing-card">
-                    <h3>Future Pricing</h3>
-                    <div class="price">Coming Soon</div>
-                    <ul class="pricing-features">
-                        <li>Post-pilot pricing TBD</li>
-                        <li>Based on pilot feedback</li>
-                        <li>Flexible tier options</li>
-                        <li>Volume discounts</li>
-                        <li>Custom packages available</li>
-                    </ul>
-                    <button class="btn-secondary" onclick="window.location.href='contact.html'">Get Updates</button>
+                <div class="future-pricing reveal-scale" data-delay="200">
+                    <h3>After the Pilot</h3>
+                    <p>Pilot partners lock in exclusive benefits:</p>
+                    <div class="benefit-grid">
+                        <div class="benefit">
+                            <span class="benefit-icon">21%</span>
+                            <span class="benefit-text">Immediate Revenue Increase</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">1st</span>
+                            <span class="benefit-text">Priority features</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">∞</span>
+                            <span class="benefit-text">Founder access</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+        </div>
         <div class="container">
             <div class="cta-content">
-                <h2>Be Part of the Cannabis Pricing Revolution</h2>
-                <p>Limited pilot spots available. Apply now to transform your dispensary's profitability.</p>
-                <form class="email-form">
-                    <input type="email" placeholder="Enter your dispensary email" required>
-                    <button type="submit" class="btn-primary">Apply for Pilot</button>
+                <h2 class="cta-title">
+                    <span class="title-word">Ready</span>
+                    <span class="title-word">to</span>
+                    <span class="title-word">Transform</span>
+                    <span class="title-word highlight">Your</span>
+                    <span class="title-word highlight">Margins?</span>
+                </h2>
+                <p class="cta-subtitle">Join the pilot program and see results in days, not months.</p>
+                <form class="email-form modern">
+                    <div class="form-wrapper">
+                        <input type="email" placeholder="your@dispensary.com" required>
+                        <button type="submit" class="btn-submit">
+                            <span>Apply Now</span>
+                            <svg class="submit-arrow" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M5 10h10m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
-                <p class="disclaimer">Free pilot program. No commitment required. Limited spots available.</p>
+                <div class="cta-stats">
+                    <span class="stat-item">10 spots left</span>
+                    <span class="stat-divider">•</span>
+                    <span class="stat-item">$0 for 3 months</span>
+                    <span class="stat-divider">•</span>
+                    <span class="stat-item">No commitment</span>
+                </div>
             </div>
         </div>
     </section>
@@ -188,7 +334,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
+                    <img src="assets/nuggy_logo_nobg.svg" alt="Nuggy Logo" class="logo-img">
                     <p>Your Personal Pricing Buddy</p>
                 </div>
                 <div class="footer-links">
@@ -223,6 +369,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

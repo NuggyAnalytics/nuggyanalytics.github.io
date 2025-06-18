@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Nuggy</title>
-    <link rel="icon" type="image/x-icon" href="assets/nuggy_logo_nobg.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/nuggy_logo_nobg.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700,800,900&family=IBM+Plex+Mono:wght@400;500;600&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -20,10 +21,10 @@
                 <ul class="nav-links">
                     <li><a href="index.html#features">Features</a></li>
                     <li><a href="index.html#how-it-works">How It Works</a></li>
-                    <li><a href="index.html#pricing">Pilot Program</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html" class="cta-button"><span>Contact Us</span></a></li>
+                    <li><a href="contact.html" class="cta-button"><span>Apply Now</span></a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -34,39 +35,42 @@
         </div>
     </nav>
 
-    <section class="page-hero">
+    <section class="about-hero">
         <div class="container">
-            <h1>About Nuggy</h1>
-            <p class="page-subtitle">Disrupting the cannabis industry one price at a time</p>
+            <div class="about-hero-content">
+                <span class="about-badge">About Us</span>
+                <h1>Disrupting Cannabis <span class="text-gradient">One Price at a Time</span></h1>
+                <p class="page-subtitle">We're building the future of dispensary profitability</p>
+            </div>
         </div>
     </section>
 
     <section class="about-content">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Our Mission</h2>
-                    <p>We're on a mission to transform the cannabis industry's notoriously thin margins into sustainable, profitable businesses. Nuggy is your personal pricing buddy, designed specifically for dispensaries ready to embrace data-driven growth.</p>
-                    
-                    <h2>Why Cannabis Pricing Matters</h2>
-                    <p>The cannabis industry operates on some of the thinnest margins in retail. Between compliance costs, taxes, and fierce competition, dispensaries struggle to maintain profitability. That's where Nuggy comes in.</p>
-                    
-                    <h2>Our Approach</h2>
-                    <p>We believe pricing shouldn't be guesswork. Our AI-powered platform analyzes your sales data, monitors market trends, and optimizes prices in real-time to maximize your margins while keeping you competitive.</p>
+            <div class="about-intro reveal-fade">
+                <h2>Our <span class="text-gradient">Mission</span></h2>
+                <p>We're on a mission to transform the cannabis industry's notoriously thin margins into sustainable, profitable businesses. Nuggy is your personal pricing buddy, designed specifically for dispensaries ready to embrace data-driven growth.</p>
+            </div>
+            
+            <div class="mission-grid">
+                <div class="mission-content reveal-fade">
+                    <h2>Why Cannabis Pricing <span class="text-gradient">Matters</span></h2>
+                    <p>The cannabis industry operates on some of the thinnest margins in retail. Between compliance costs, taxes, and fierce competition, dispensaries struggle to maintain profitability.</p>
+                    <p>Traditional pricing strategies don't work in cannabis. Product diversity, regulatory constraints, and rapid market changes require a smarter approach.</p>
+                    <p>That's where Nuggy comes in. We've built AI specifically for cannabis retail, understanding the unique challenges you face every day.</p>
                 </div>
                 
-                <div class="about-values">
-                    <h2>Our Values</h2>
-                    <div class="value-card">
-                        <h3>🚀 Seamless Innovation</h3>
+                <div class="values-list reveal-fade" data-delay="200">
+                    <div class="value-item">
+                        <h3><span class="value-icon">🚀</span> Seamless Innovation</h3>
                         <p>Technology should work for you, not against you. One-click integration, zero complexity.</p>
                     </div>
-                    <div class="value-card">
-                        <h3>🤝 Trust & Transparency</h3>
+                    <div class="value-item">
+                        <h3><span class="value-icon">🤝</span> Trust & Transparency</h3>
                         <p>Your data is your business. We're committed to complete transparency in how we handle your information.</p>
                     </div>
-                    <div class="value-card">
-                        <h3>💡 Friendly Disruption</h3>
+                    <div class="value-item">
+                        <h3><span class="value-icon">💡</span> Friendly Disruption</h3>
                         <p>We're shaking up the industry with a smile. No arrogance, just results.</p>
                     </div>
                 </div>
@@ -76,34 +80,131 @@
 
     <section class="team-section">
         <div class="container">
-            <h2 class="section-title">Meet the Team</h2>
-            <p class="section-subtitle">Passionate about cannabis retail success</p>
+            <div class="team-header">
+                <span class="section-label">Leadership</span>
+                <h2>Meet the <span class="text-gradient">Founders</span></h2>
+                <p>Passionate about transforming cannabis retail</p>
+            </div>
             <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo">👤</div>
-                    <h3>Founder & CEO</h3>
-                    <p>Cannabis industry veteran with a passion for technology and fair pricing.</p>
+                <div class="team-member reveal-scale">
+                    <div class="member-photo">
+                        <img src="assets/royce-myers.jpeg" alt="Royce Myers" onerror="this.style.display='none'">
+                        <span style="display:none">👨‍💼</span>
+                    </div>
+                    <h3 class="member-name">Royce Myers</h3>
+                    <p class="member-title">CEO & Co-Founder</p>
+                    <p class="member-bio">Babson student and entrepreneur leading the charge to make dynamic pricing accessible to every dispensary.</p>
+                    <a href="https://www.linkedin.com/in/royce-myers-09993a180/" class="member-linkedin" target="_blank">
+                        <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
                 </div>
-                <div class="team-member">
-                    <div class="member-photo">👤</div>
-                    <h3>Head of Engineering</h3>
-                    <p>Building the AI that makes smart pricing accessible to every dispensary.</p>
+                
+                <div class="team-member reveal-scale" data-delay="100">
+                    <div class="member-photo">
+                        <img src="assets/dakota-chang.jpeg" alt="Dakota Chang" onerror="this.style.display='none'">
+                        <span style="display:none">👩‍💻</span>
+                    </div>
+                    <h3 class="member-name">Dakota Chang</h3>
+                    <p class="member-title">CTO & Co-Founder</p>
+                    <p class="member-bio">Olin student and engineer building the AI infrastructure that powers smart pricing decisions for dispensaries nationwide.</p>
+                    <a href="https://linkedin.com/in/dakota-chang-0000abcd" class="member-linkedin" target="_blank">
+                        <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
                 </div>
-                <div class="team-member">
-                    <div class="member-photo">🌟</div>
-                    <h3>You?</h3>
-                    <p>We're hiring! Check out our <a href="careers.html">careers page</a> to join our mission.</p>
+                
+                <div class="team-member reveal-scale" data-delay="200">
+                    <div class="member-photo">
+                        <img src="assets/alex-joffe.jpeg" alt="Alex Joffe" onerror="this.style.display='none'">
+                        <span style="display:none">👨‍💼</span>
+                    </div>
+                    <h3 class="member-name">Alex Joffe</h3>
+                    <p class="member-title">COO & Co-Founder</p>
+                    <p class="member-bio">Cannabis industry veteran streamlining operations and ensuring seamless integration with dispensary workflows.</p>
+                    <a href="https://www.linkedin.com/in/alexander-joffe-a273a1104/" class="member-linkedin" target="_blank">
+                        <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+                
+                <div class="team-member reveal-scale" data-delay="300">
+                    <div class="member-photo">
+                        <img src="assets/markus-von-wismar.jpeg" alt="Markus von Wismar" onerror="this.style.display='none'">
+                        <span style="display:none">👨‍🔬</span>
+                    </div>
+                    <h3 class="member-name">Markus von Wismar</h3>
+                    <p class="member-title">CFO & Co-Founder</p>
+                    <p class="member-bio">Leading financial strategy to ensure sustainable growth and profitability for both Nuggy and our clients.</p>
+                    <a href="https://www.linkedin.com/in/markusvonwismar/" class="member-linkedin" target="_blank">
+                        <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>Our <span class="text-gradient">Story</span></h2>
+                <div class="story-timeline">
+                    <div class="timeline-item reveal-fade">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">May 2025</span>
+                            <h3>The Problem Emerges</h3>
+                            <p>After witnessing countless dispensaries struggle with razor-thin margins, our founders realized pricing was the hidden key to profitability.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-fade" data-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">June 2025</span>
+                            <h3>Building the Solution</h3>
+                            <p>We assembled a team of cannabis industry veterans and AI experts to build pricing technology specifically for dispensaries.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-fade" data-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Today</span>
+                            <h3>Pilot Program Launch</h3>
+                            <p>We're partnering with forward-thinking dispensaries to revolutionize cannabis pricing, one store at a time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+        </div>
         <div class="container">
             <div class="cta-content">
-                <h1>Ready to Join Our Pilot?</h1>
-                <p>Be part of the pricing revolution in cannabis retail.</p>
-                <a href="index.html#contact" class="btn-primary">Apply Now</a>
+                <h2 class="cta-title">
+                    <span class="title-word">Ready</span>
+                    <span class="title-word">to</span>
+                    <span class="title-word">Join</span>
+                    <span class="title-word highlight">Our</span>
+                    <span class="title-word highlight">Pilot?</span>
+                </h2>
+                <p class="cta-subtitle">Be part of the pricing revolution in cannabis retail.</p>
+                <a href="contact.html" class="btn-primary large">
+                    <span>Apply Now</span>
+                    <span class="btn-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -148,5 +249,14 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Show emoji placeholder when image fails to load
+        document.querySelectorAll('.member-photo img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

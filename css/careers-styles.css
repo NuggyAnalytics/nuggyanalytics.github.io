@@ -379,6 +379,14 @@ a.photo-card:hover {
     margin-bottom: calc(var(--grid-unit) * 2);
 }
 
+.job-card.coming-soon p {
+    margin-bottom: calc(var(--grid-unit) * 3);
+}
+
+.notify-btn {
+    margin-top: calc(var(--grid-unit) * 1);
+}
+
 .general-application {
     margin-top: calc(var(--grid-unit) * 8);
     text-align: center;

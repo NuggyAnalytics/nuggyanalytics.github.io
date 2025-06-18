@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Nuggy</title>
-    <link rel="icon" type="image/x-icon" href="assets/nuggy_logo_nobg.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/nuggy_logo_nobg.svg">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700,800,900&family=IBM+Plex+Mono:wght@400;500;600&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -20,10 +20,10 @@
                 <ul class="nav-links">
                     <li><a href="index.html#features">Features</a></li>
                     <li><a href="index.html#how-it-works">How It Works</a></li>
-                    <li><a href="index.html#pricing">Pilot Program</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html" class="cta-button"><span>Contact Us</span></a></li>
+                    <li><a href="contact.html" class="cta-button"><span>Apply Now</span></a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -36,32 +36,33 @@
 
     <section class="page-hero">
         <div class="container">
-            <h1>Get in Touch</h1>
-            <p class="page-subtitle">We'd love to hear from you</p>
+            <span class="section-label">Contact</span>
+            <h1>Let's Transform Your <span class="text-gradient">Margins Together</span></h1>
+            <p class="page-subtitle">Join our pilot program or reach out with questions</p>
         </div>
     </section>
 
     <section class="contact-content">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Let's Connect</h2>
-                    <p>Whether you're interested in our pilot program, have questions about Nuggy, or just want to chat about the future of cannabis retail, we're here to help.</p>
+                <div class="contact-info reveal-fade">
+                    <h2>Get Started <span class="text-gradient">Today</span></h2>
+                    <p>Join the cannabis pricing revolution. We're accepting a limited number of dispensaries into our pilot program.</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method">
-                            <h3>📧 Email</h3>
-                            <p><a href="mailto:info@nuggy.io">info@nuggy.io</a></p>
+                            <h3>🌿 Pilot Program</h3>
+                            <p>Limited spots available. Get <strong>3 months free</strong> and help shape the future of cannabis pricing. <a href="#contact-form">Apply now</a></p>
                         </div>
                         
                         <div class="contact-method">
-                            <h3>🚀 Pilot Program</h3>
-                            <p>Ready to transform your margins? <a href="index.html#contact">Apply for our pilot program</a></p>
+                            <h3>📊 Schedule a Demo</h3>
+                            <p>See Nuggy in action. Book a personalized demo with our team. <a href="mailto:info@nuggy.io?subject=Demo Request">Request demo</a></p>
                         </div>
                         
                         <div class="contact-method">
-                            <h3>💼 Partnerships</h3>
-                            <p>Interested in partnering with Nuggy? Let's discuss how we can work together.</p>
+                            <h3>💬 Quick Questions</h3>
+                            <p>Email us directly at <a href="mailto:info@nuggy.io">info@nuggy.io</a> for fast responses.</p>
                         </div>
                     </div>
                     
@@ -73,8 +74,8 @@
                     </div>
                 </div>
                 
-                <div class="contact-form-section">
-                    <h2>Send Us a Message</h2>
+                <div class="contact-form-section reveal-fade" data-delay="200">
+                    <h2>Send Us a <span class="text-gradient">Message</span></h2>
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -92,13 +93,14 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject">Interest Area</label>
                             <select id="subject" name="subject" required>
-                                <option value="">Select a topic</option>
-                                <option value="pilot">Pilot Program Inquiry</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="support">Technical Support</option>
-                                <option value="general">General Question</option>
+                                <option value="">Select your interest</option>
+                                <option value="pilot">Join Pilot Program</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="partnership">POS Integration Partnership</option>
+                                <option value="investor">Investor Relations</option>
+                                <option value="general">General Inquiry</option>
                             </select>
                         </div>
                         
@@ -107,7 +109,10 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary">Send Message</button>
+                        <button type="submit" class="btn-primary">
+                            <span>Send Message</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -138,6 +143,7 @@
         </div>
     </section>
 
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -166,8 +172,7 @@
                         <h4>Connect</h4>
                         <ul>
                             <li><a href="mailto:info@nuggy.io">info@nuggy.io</a></li>
-                            <li><a href="https://www.linkedin.com/company/nuggypricing/">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company/nuggypricing/">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>
@@ -198,12 +203,12 @@
             
             // Show success message
             const button = this.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            button.textContent = 'Message Sent! ↗';
-            button.style.background = '#34C759';
+            const originalContent = button.innerHTML;
+            button.innerHTML = '<span>Message Sent!</span> <span class="btn-arrow">✓</span>';
+            button.style.background = 'var(--primary-green)';
             
             setTimeout(() => {
-                button.textContent = originalText;
+                button.innerHTML = originalContent;
                 button.style.background = '';
                 this.reset();
             }, 3000);

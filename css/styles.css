@@ -1742,10 +1742,31 @@ h3 {
         flex-direction: column;
         padding: calc(var(--grid-unit) * 3);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--graphite-10);
+        border-top: none;
+        border-radius: 0 0 16px 16px;
+        z-index: 999;
     }
     
     .nav-links.active {
         display: flex;
+    }
+    
+    /* Fix Apply Now button in mobile menu */
+    .nav-links .cta-button {
+        margin-top: calc(var(--grid-unit) * 2);
+        padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+        text-align: center;
+        white-space: nowrap;
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        align-self: stretch;
+    }
+    
+    .nav-links .cta-button span {
+        display: inline-block;
+        width: 100%;
     }
     
     .mobile-menu-toggle {

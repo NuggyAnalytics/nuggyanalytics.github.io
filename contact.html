@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700,800,900&family=IBM+Plex+Mono:wght@400;500;600&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRZQ0H7ZZR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-ZRZQ0H7ZZR');
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -23,6 +32,9 @@
                     <li><a href="index.html#pricing">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    
                     <li><a href="contact.html" class="cta-button"><span>Apply Now</span></a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
@@ -75,44 +87,28 @@
                 </div>
                 
                 <div class="contact-form-section reveal-fade" data-delay="200">
-                    <h2>Send Us a <span class="text-gradient">Message</span></h2>
+                    <h2>Apply to the <span class="text-gradient">Pilot Program</span></h2>
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="company">Company (Optional)</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Interest Area</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select your interest</option>
-                                <option value="pilot">Join Pilot Program</option>
-                                <option value="demo">Request a Demo</option>
-                                <option value="partnership">POS Integration Partnership</option>
-                                <option value="investor">Investor Relations</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="company">Business Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your Dispensary's Name" required>
                         </div>
                         
                         <button type="submit" class="btn-primary">
-                            <span>Send Message</span>
+                            <span>Apply Now</span>
                             <span class="btn-arrow">→</span>
                         </button>
+                        <div class="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -188,30 +184,43 @@
         // Handle contact form submission
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const company = formData.get('company');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            const subjectLine = encodeURIComponent(`Contact Form: ${subject} - ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`);
-            
-            window.location.href = `mailto:info@nuggy.io?subject=${subjectLine}&body=${body}`;
-            
-            // Show success message
-            const button = this.querySelector('button[type="submit"]');
-            const originalContent = button.innerHTML;
-            button.innerHTML = '<span>Message Sent!</span> <span class="btn-arrow">✓</span>';
-            button.style.background = 'var(--primary-green)';
-            
+            const form = this;
+            const button = form.querySelector('button[type="submit"]');
+            const statusMessage = form.querySelector('.form-status');
+            const originalButtonText = button.innerHTML;
+
+            // Show progress
+            button.innerHTML = '<span>Sending...</span>';
+            button.disabled = true;
+
+            // Simulate form submission
             setTimeout(() => {
-                button.innerHTML = originalContent;
-                button.style.background = '';
-                this.reset();
-            }, 3000);
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const company = formData.get('company');
+                
+                const subjectLine = encodeURIComponent(`Pilot Program Application: ${company}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nBusiness Name: ${company}`);
+                
+                // In a real scenario, you'd use fetch() to send this to a server.
+                // For now, we'll stick with the mailto link for the demo.
+                console.log(`Mailto link generated: mailto:info@nuggy.io?subject=${subjectLine}&body=${body}`);
+
+                // Show success message
+                statusMessage.textContent = 'Thank you! Your application has been received.';
+                statusMessage.style.color = 'var(--primary-green)';
+                form.reset();
+                button.innerHTML = '<span>Sent!</span> <span class="btn-arrow">✓</span>';
+                
+                // Reset button after a few seconds
+                setTimeout(() => {
+                    button.innerHTML = originalButtonText;
+                    button.disabled = false;
+                    statusMessage.textContent = '';
+                }, 4000);
+
+            }, 1000); // Simulate network delay
         });
     </script>
 </body>

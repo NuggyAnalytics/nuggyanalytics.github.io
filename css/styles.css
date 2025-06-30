@@ -1294,6 +1294,36 @@ h3 {
     color: var(--primary-green);
 }
 
+/* Plain list for pilot features */
+.pilot-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 calc(var(--grid-unit) * 4) 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pilot-features-list li {
+    padding: calc(var(--grid-unit) * 1) 0;
+    color: var(--warm-cream);
+    position: relative;
+    padding-left: calc(var(--grid-unit) * 3);
+}
+
+.pilot-features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--highlight-lime);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.pilot-features-list li.highlight {
+    color: var(--highlight-lime);
+    font-weight: 600;
+}
+
 .btn-primary.large {
     width: 100%;
     padding: calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 4);

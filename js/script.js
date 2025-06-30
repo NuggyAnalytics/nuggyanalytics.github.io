@@ -124,13 +124,6 @@ if (featuresCarousel && prevButton && nextButton) {
     let currentIndex = 0;
 
     // Get the width of a single feature item including gap
-    const getScrollAmount = () => {
-        const featureItem = document.querySelector('.feature-item');
-        if (!featureItem) return 300;
-        const styles = window.getComputedStyle(featuresCarousel);
-        const gap = parseInt(styles.gap) || 0;
-        return featureItem.offsetWidth + gap;
-    };
 
     // Scroll to specific index with centering
     const scrollToIndex = (index) => {

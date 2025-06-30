@@ -1,0 +1,18 @@
+{
+  "name": "nuggy-website",
+  "version": "1.0.0",
+  "description": "Nuggy - Your Personal Pricing Buddy",
+  "scripts": {
+    "start": "python3 serve.py",
+    "serve": "npx http-server -p 8080 -c-1",
+    "serve-python": "python3 -m http.server 8080",
+    "build": "echo 'No build step required for static site'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": ["cannabis", "pricing", "AI", "dispensary"],
+  "author": "Nuggy",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -22,7 +22,7 @@
     background: var(--warm-cream);
     position: relative;
     overflow: hidden;
-    background-image: url('/assets/tax_blog_cover.png');
+    background-image: url('../assets/tax_blog_cover.png');
     background-size: cover;
     background-position: center;
 }

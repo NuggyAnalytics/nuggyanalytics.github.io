@@ -1,0 +1,39 @@
+# GitHub Pages Configuration
+# This file helps configure how GitHub Pages serves your site
+
+# Basic settings
+title: Nuggy - Your Personal Pricing Buddy
+description: AI-powered dynamic pricing for cannabis dispensaries
+url: "https://nuggyanalytics.com" # your GitHub Pages URL
+
+# GitHub Pages settings
+github:
+  is_project_page: false
+  is_user_page: false
+
+# Exclude files from being served
+exclude:
+  - README.md
+  - ENGINEERING_DOCS.md
+  - GEMINI.md
+  - package.json
+  - package-lock.json
+  - node_modules/
+  - serve.py
+  - docs/
+  - .git/
+  - .gitignore
+
+# Include specific files/folders
+include:
+  - index.html
+  - about.html
+  - blog.html
+  - careers.html
+  - contact.html
+  - faq.html
+  - assets/
+  - css/
+  - js/
+  - blog_posts/
+  - CNAME

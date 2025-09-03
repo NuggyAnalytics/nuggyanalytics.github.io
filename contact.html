@@ -86,31 +86,8 @@
                     </div>
                 </div>
                 
-                <div class="contact-form-section reveal-fade" data-delay="200">
-                    <h2>Apply to the <span class="text-gradient">Pilot Program</span></h2>
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Business Name</label>
-                            <input type="text" id="company" name="company" placeholder="Your Dispensary's Name" required>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary">
-                            <span>Apply Now</span>
-                            <span class="btn-arrow">→</span>
-                        </button>
-                        <div class="form-status"></div>
-                    </form>
-                </div>
+                <script src="https://js-na2.hsforms.net/forms/embed/243548122.js" defer></script>
+<div class="hs-form-frame" data-region="na2" data-form-id="f2858a73-1aed-4bde-a473-3f568caa0098" data-portal-id="243548122"></div>
             </div>
         </div>
     </section>
@@ -180,48 +157,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        // Handle contact form submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = this;
-            const button = form.querySelector('button[type="submit"]');
-            const statusMessage = form.querySelector('.form-status');
-            const originalButtonText = button.innerHTML;
-
-            // Show progress
-            button.innerHTML = '<span>Sending...</span>';
-            button.disabled = true;
-
-            // Simulate form submission
-            setTimeout(() => {
-                const formData = new FormData(form);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const company = formData.get('company');
-                
-                const subjectLine = encodeURIComponent(`Pilot Program Application: ${company}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nBusiness Name: ${company}`);
-                
-                // In a real scenario, you'd use fetch() to send this to a server.
-                // For now, we'll stick with the mailto link for the demo.
-                console.log(`Mailto link generated: mailto:info@nuggy.io?subject=${subjectLine}&body=${body}`);
-
-                // Show success message
-                statusMessage.textContent = 'Thank you! Your application has been received.';
-                statusMessage.style.color = 'var(--primary-green)';
-                form.reset();
-                button.innerHTML = '<span>Sent!</span> <span class="btn-arrow">✓</span>';
-                
-                // Reset button after a few seconds
-                setTimeout(() => {
-                    button.innerHTML = originalButtonText;
-                    button.disabled = false;
-                    statusMessage.textContent = '';
-                }, 4000);
-
-            }, 1000); // Simulate network delay
-        });
-    </script>
+    
 </body>
 </html>

@@ -2008,7 +2008,7 @@ h3 {
     .pricing-wrapper {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -2101,7 +2101,7 @@ h3 {
     .timeline-line {
         display: none;
     }
-    
+
     .metric-grid {
         grid-template-columns: 1fr;
     }

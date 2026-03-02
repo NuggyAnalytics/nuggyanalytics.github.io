@@ -50,33 +50,62 @@ window.addEventListener('scroll', () => {
 // Form submission handling with modern animation
 const emailForm = document.querySelector('.email-form');
 if (emailForm) {
-    emailForm.addEventListener('submit', (e) => {
+    emailForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const email = e.target.querySelector('input[type="email"]').value;
+        const emailInput = e.target.querySelector('input[type="email"]');
+        const email = emailInput ? emailInput.value.trim() : '';
+
+        if (!email) return;
         
-        // Create mailto link with subject and body
-        const subject = encodeURIComponent('Pilot Program Application - Nuggy');
-        const body = encodeURIComponent(`Hello Nuggy Team,\n\nI'm interested in joining your pilot program.\n\nEmail: ${email}\n\nLooking forward to hearing from you!\n\nBest regards`);
-        window.location.href = `mailto:info@nuggy.io?subject=${subject}&body=${body}`;
-        
-        // Show success message with animation
         const button = e.target.querySelector('button');
+        if (!button) return;
+
         const originalContent = button.innerHTML;
-        button.innerHTML = '<span>Application Sent!</span> <i data-lucide="check" class="btn-arrow"></i>';
-        if (typeof lucide !== 'undefined') lucide.createIcons({ root: button });
-        button.style.background = 'var(--highlight-lime)';
-        button.style.color = 'var(--graphite-ink)';
-        
-        // Add success animation
-        button.classList.add('success-animation');
-        
-        setTimeout(() => {
-            button.innerHTML = originalContent;
-            button.style.background = '';
-            button.style.color = '';
-            button.classList.remove('success-animation');
+        button.disabled = true;
+        button.innerHTML = '<span>Submitting...</span>';
+
+        try {
+            const hubspotEndpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/243548122/f2858a73-1aed-4bde-a473-3f568caa0098';
+            const response = await fetch(hubspotEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    fields: [
+                        { name: 'email', value: email }
+                    ],
+                    context: {
+                        pageUri: window.location.href,
+                        pageName: document.title
+                    }
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HubSpot submission failed with status ${response.status}`);
+            }
+
+            button.innerHTML = '<span>Application Sent!</span> <i data-lucide="check" class="btn-arrow"></i>';
+            if (typeof lucide !== 'undefined') lucide.createIcons({ root: button });
+            button.style.background = 'var(--highlight-lime)';
+            button.style.color = 'var(--graphite-ink)';
+            button.classList.add('success-animation');
             e.target.reset();
-        }, 3000);
+        } catch (error) {
+            // Keep a no-backend fallback so users can still contact if API calls fail.
+            const subject = encodeURIComponent('Pilot Program Application - Nuggy');
+            const body = encodeURIComponent(`Hello Nuggy Team,\n\nI'm interested in joining your pilot program.\n\nEmail: ${email}\n\nLooking forward to hearing from you!\n\nBest regards`);
+            window.location.href = `mailto:info@nuggy.io?subject=${subject}&body=${body}`;
+        } finally {
+            setTimeout(() => {
+                button.innerHTML = originalContent;
+                button.style.background = '';
+                button.style.color = '';
+                button.classList.remove('success-animation');
+                button.disabled = false;
+            }, 3000);
+        }
     });
 }
 

@@ -6,7 +6,7 @@ const Components = {
         const navItems = [
             { href: 'index.html#features', text: 'Features' },
             { href: 'index.html#how-it-works', text: 'How It Works' },
-            { href: 'index.html#pricing', text: 'Pilot Program' },
+            { href: 'pricing.html', text: 'Pricing' },
             { href: 'about.html', text: 'About' },
             { href: 'careers.html', text: 'Careers' }
         ];
@@ -53,7 +53,7 @@ const Components = {
                         <h4>Product</h4>
                         <ul>
                             <li><a href="index.html#features">Features</a></li>
-                            <li><a href="index.html#pricing">Pricing</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
                             <li><a href="index.html#how-it-works">How It Works</a></li>
                         </ul>
                     </div>

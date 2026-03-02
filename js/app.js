@@ -40,7 +40,8 @@ function initHomePage() {
             // Show success message
             const button = e.target.querySelector('button');
             const originalContent = button.innerHTML;
-            button.innerHTML = '<span>Application Sent!</span> <span class="btn-arrow">✓</span>';
+            button.innerHTML = '<span>Application Sent!</span> <i data-lucide="check" class="btn-arrow"></i>';
+            if (typeof lucide !== 'undefined') lucide.createIcons({ root: button });
             button.style.background = 'var(--highlight-lime)';
             button.style.color = 'var(--graphite-ink)';
             
@@ -125,13 +126,14 @@ function initContactPage() {
             
             // Show success message
             const button = e.target.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            button.textContent = 'Message Sent! ✓';
+            const originalHTML = button.innerHTML;
+            button.innerHTML = 'Message Sent! <i data-lucide="check" class="btn-arrow"></i>';
+            if (typeof lucide !== 'undefined') lucide.createIcons({ root: button });
             button.style.background = 'var(--highlight-lime)';
             button.style.color = 'var(--graphite-ink)';
             
             setTimeout(() => {
-                button.textContent = originalText;
+                button.innerHTML = originalHTML;
                 button.style.background = '';
                 button.style.color = '';
                 e.target.reset();

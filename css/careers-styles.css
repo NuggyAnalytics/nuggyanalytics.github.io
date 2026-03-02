@@ -120,8 +120,18 @@
 }
 
 .value-icon {
-  font-size: 32px;
-  line-height: 1;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
 }
 
 .value-item h4 {
@@ -193,7 +203,17 @@ a.photo-card:hover {
 }
 
 .emoji {
-  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
 }
 
 .photo-label {
@@ -239,8 +259,18 @@ a.photo-card:hover {
 }
 
 .perk-icon {
-  font-size: 48px;
+  width: 48px;
+  height: 48px;
   margin-bottom: calc(var(--grid-unit) * 2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perk-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
 }
 
 .perk-card h3 {
@@ -549,8 +579,17 @@ a.photo-card:hover {
 }
 
 .department-icon {
-  font-size: 40px;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.department-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
 }
 
 /* Smooth scroll behavior */

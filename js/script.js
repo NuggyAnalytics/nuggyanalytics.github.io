@@ -62,7 +62,8 @@ if (emailForm) {
         // Show success message with animation
         const button = e.target.querySelector('button');
         const originalContent = button.innerHTML;
-        button.innerHTML = '<span>Application Sent!</span> <span class="btn-arrow">✓</span>';
+        button.innerHTML = '<span>Application Sent!</span> <i data-lucide="check" class="btn-arrow"></i>';
+        if (typeof lucide !== 'undefined') lucide.createIcons({ root: button });
         button.style.background = 'var(--highlight-lime)';
         button.style.color = 'var(--graphite-ink)';
         
@@ -532,3 +533,8 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Initialize Lucide icons (replace data-lucide elements with SVGs)
+if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+}

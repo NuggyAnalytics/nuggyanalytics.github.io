@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,7 +53,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
             <li><a href="faq.html">FAQ</a></li>
 
             <li>
@@ -426,7 +426,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Nuggy. All rights reserved.</p>
+          <p>&copy; 2026 Nuggy. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -438,10 +438,10 @@
         button.addEventListener("click", function () {
           const position = this.getAttribute("data-position");
           const subject = encodeURIComponent(
-            `Application: ${position} - Nuggy`
+            `Application: ${position} - Nuggy`,
           );
           const body = encodeURIComponent(
-            `Hello Nuggy Team,\n\nI'm interested in applying for the ${position} position.\n\n[Please attach your resume and portfolio/relevant work samples]\n\nBest regards`
+            `Hello Nuggy Team,\n\nI'm interested in applying for the ${position} position.\n\n[Please attach your resume and portfolio/relevant work samples]\n\nBest regards`,
           );
           window.location.href = `mailto:info@nuggy.io?subject=${subject}&body=${body}`;
         });
